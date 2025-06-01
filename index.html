@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <title>IMPAKT</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1 class="main-title"><center>DENÍK IMPAKT</center></h1>
+    <hr class="section-divider" />
+    <div class="buttons-container">
+      <button onclick="document.getElementById('join-us').scrollIntoView({ behavior: 'smooth' });">Přidej se k nám!</button>
+      <button onclick="document.getElementById('articles').scrollIntoView({ behavior: 'smooth' });">Články</button>
+      <button onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });">Kdo jsme?</button>
+    </div>
+    <hr class="section-divider" />
+  </header>
+
+  <!-- Struktura s postranními bublinami -->
+  <div class="page-layout">
+    <div class="side-bubbles left">
+      <div class="bubble"><b>ZASEDÁNÍ KONGRESU</b> <br> Květen 2025 <br><b>VOLBY PRÁVĚ PROBÍHAJÍ</b><br>⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯<br> <b>Motngomery</b> - X
+         <br><b>Palomino Creek</b>- X <br><b>Blueberry</b>- X <br><b>Dillimore</b>- X <br><b>Fort Carson</b>- X
+      </div>
+      <div class="bubble"><b>NOVELY ZÁKONA</b><br>Květen 2025<br>⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯<br>X
+      </div>
+    </div>
+
+    <main class="articles-section">
+      <div id="articles">
+        <a href="admin.html" class="admin-link"></a>
+        <!-- články se načtou sem pomocí JS -->
+      </div>
+    </main>
+
+    <div class="side-bubbles right">
+      <div class="bubble"><b>BURZA</b><br>⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯<br>Sphere Corporation - 📈<br>Belleville AG - 📈<br>
+        Autobazar Deaton - 📈 <br>SanGas - 📉
+        <br>Pay 'n' Spray - 📉<br>Ammu-Nation - 📉<br>Sprunk - 📈<br>Redwood Cigarettes - 📈
+      </div>
+      <div class="bubble"><b>VOLBY</b><br>Červen 2025<br>⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯<br><b>Motngomery</b> - Marcus Nolan, Ratko Dragic<br>
+        <b>Palomino Creek</b> - Jackson Nolan, James Palmerg <br><b>Blueberry</b> - Wilhelm Schultz<br><b>Dillimore</b> - Alexandrej Kyush, Elise Swift, John Dreilor <br>
+        <b>Fort Carson</b> - Ignac Brezina, James Harrington
+      </div>
+    </div>
+  </div>
+
+  <!-- Zbytek stránky -->
+  <hr class="section-divider" />
+  
+  <section id="about" class="about-section">
+    <h2>Kdo jsme?</h2>
+    <p>
+      Jsme redakce, která se nebojí vstoupit do prostor, kam se běžní lidé většinou raději neodvažují jít. Naše práce nás dovede do temných zákoutí San Andreas, tam, kde pravda často zůstává skrytá. Jsme my, kteří se nebojí prozrazovat to, co se v těchto neznámých a často nebezpečných oblastech odehrává. Naším cílem je, abychom přinášeli svědectví a informace o těchto neobjevených částí San Andreas.
+    </p>
+  </section>
+
+  <hr class="section-divider" />
+
+  <section id="join-us" class="join-us-section">
+    <h2>Přidej se k nám!</h2>
+    <p>
+      V případě zájmu o práci na pozici redaktora, zašlete svůj životopis na: william.eberhardt@post.ic
+    </p>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- Nová sekce Náš tým -->
+  <section id="team" class="team-section">
+    <h2>Náš tým</h2>
+ <div class="team-gallery">
+  <div class="team-member">
+    <img src="https://i.imgur.com/w7cZdKQ.png" alt="Člen týmu 1" />
+    <p class="member-text"><b>Ředitel</b><br>Harvey Eberhardt</p>
+  </div><div class="team-member">
+    <img src="https://i.imgur.com/v234drk.png" alt="Člen týmu 2" />
+    <p class="member-text"><b>Šéfredaktor</b><br>William Eberhardt</p>
+  </div>
+</div>
+  </section>
+
+  <hr class="section-divider" />
+  
+  <p><center>© 2025 provozovatel webové stránky je William Eberhardt</center></p>
+
+  <script src="script.js"></script>
+</body>
+</html>

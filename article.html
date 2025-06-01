@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="cs">
+<head>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Článek</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body id="article-page">
+  <header>
+    <h1 class="main-title"><center>DENÍK IMPAKT</center></h1>
+     <hr class="section-divider" />
+    <div class="buttons-container">
+      <button onclick="window.location.href='index.html#join-us';">Přidej se k nám!</button>
+      <button onclick="window.location.href='index.html#articles';">Články</button>
+      <button onclick="window.location.href='index.html#about';">Kdo jsme?</button>
+    </div>
+    <hr class="section-divider" />
+  </header>
+  <div id="article-content" style="width: 40%; margin-left: auto; margin-right: auto; padding: 20px;"></div>
+
+  <div id="article-content"></div>
+
+
+
+  <script>
+    
+    // Načtení ID článku z URL
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+
+    // Načtení souboru articles.json a hledání článku podle ID
+    fetch('articles.json')
+      .then(response => response.json())
+      .then(data => {
+        const article = data.find(a => a.id == id);
+        if (article) {
+          // Zobrazení článku
+          document.getElementById('article-content').innerHTML = `
+            <h1><center>${article.title}<center></h1>
+            <div>${article.content}</div>
+          `;
+        } else {
+          // Pokud článek není nalezen
+          document.getElementById('article-content').innerText = 'Článek nenalezen.';
+        }
+      })
+      .catch(error => {
+        console.error('Chyba při načítání článků:', error);
+        document.getElementById('article-content').innerText = 'Došlo k chybě při načítání článků.';
+        
+      });
+  </script>
+  <hr class="section-divider" />
+  <p><center>© 2025 provozovatel webové stránky je Dwight Calloway</center></p>
+</body>
+</html>
